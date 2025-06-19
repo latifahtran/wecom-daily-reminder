@@ -2,7 +2,7 @@ name: WeCom Daily Reminder
 
 on:
   schedule:
-    - cron: '25 07 * * *' # 07:25 UTC = 14:25 (2:25 PM) Vietnam time
+    - cron: '28 07 * * *' # 07:25 UTC = 14:25 (2:25 PM) Vietnam time
   workflow_dispatch: # Cho phép chạy thủ công
 
 jobs:
