@@ -1,0 +1,21 @@
+name: WeCom Daily Reminder
+
+on:
+  schedule:
+    - cron: '50 10 * * *' # 10:50 UTC = 5:50 PM Vietnam time
+  workflow_dispatch: # allow manual run
+
+jobs:
+  send_reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send reminder to WeCom
+        run: |
+          curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=aff7c878-2dad-4c74-b439-943c75b5a8cb' \
+          -H 'Content-Type: application/json' \
+          -d '{
+                "msgtype": "text",
+                "text": {
+                  "content": "⏰ It’s 5:20 PM! Please wrap up work and go home 🎉"
+                }
+              }'
