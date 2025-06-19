@@ -1,22 +1,22 @@
-name: WeCom Daily Reminder
+# name: WeCom Daily Reminder
 
-on:
-  schedule:
-    - cron: '20 10 * * *' # 10:20 UTC = 17:20 (5:20 PM) Vietnam time
-  workflow_dispatch: # Cho phép chạy thủ công
+# on:
+#   schedule:
+#     - cron: '20 10 * * *' # 10:20 UTC = 17:20 (5:20 PM) Vietnam time
+#   workflow_dispatch: # Cho phép chạy thủ công
 
-jobs:
-  send_reminder:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send reminder to WeCom
-        run: |
-          curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=aff7c878-2dad-4c74-b439-943c75b5a8cb' \
-          -H 'Content-Type: application/json' \
-          -d '{
-                "msgtype": "text",
-                "text": {
-                  "content": "Chuẩn bị về thôi 🏡"
-                }
-              }'
+# jobs:
+#   send_reminder:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Send reminder to WeCom
+#         run: |
+#           curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=aff7c878-2dad-4c74-b439-943c75b5a8cb' \
+#           -H 'Content-Type: application/json' \
+#           -d '{
+#                 "msgtype": "text",
+#                 "text": {
+#                   "content": "Chuẩn bị về thôi 🏡"
+#                 }
+#               }'
 
