@@ -2,8 +2,8 @@ name: WeCom Daily Reminder
 
 on:
   schedule:
-    - cron: '50 10 * * *' # 10:50 UTC = 5:50 PM Vietnam time
-  workflow_dispatch: # allow manual run
+    - cron: '25 07 * * *' # 07:25 UTC = 14:25 (2:25 PM) Vietnam time
+  workflow_dispatch: # Cho phép chạy thủ công
 
 jobs:
   send_reminder:
@@ -16,6 +16,6 @@ jobs:
           -d '{
                 "msgtype": "text",
                 "text": {
-                  "content": "⏰ It’s 5:20 PM! Please wrap up work and go home 🎉"
+                  "content": " auto auto 🎉"
                 }
               }'
