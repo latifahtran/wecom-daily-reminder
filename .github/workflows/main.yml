@@ -2,7 +2,7 @@ name: WeCom Daily Reminder
 
 on:
   schedule:
-    - cron: '40 07 * * *' # 07:28 UTC = 14:28 (2:28 PM) Vietnam time
+    - cron: '20 10 * * *' # 10:20 UTC = 17:20 (5:20 PM) Vietnam time
   workflow_dispatch: # Cho phép chạy thủ công
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
           -d '{
                 "msgtype": "text",
                 "text": {
-                  "content": "hihi"
+                  "content": "Chuẩn bị về thôi 🏡"
                 }
               }'
 
